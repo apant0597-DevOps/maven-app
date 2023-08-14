@@ -2,9 +2,9 @@
 pipeline {
     agent any
     stages {
-        stage('BUILD'){
+        stage('MAVEN BUILD'){
             steps{
-                echo 'mvn clean package'
+                 sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('PUBLISH'){
