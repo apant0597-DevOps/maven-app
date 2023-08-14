@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('PUBLISH'){
-            stages{
+            steps {
                 echo 'SEND FOR PUBLISH'
             }
         }
