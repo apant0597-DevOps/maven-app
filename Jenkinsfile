@@ -8,7 +8,6 @@ pipeline {
         stage('MAVEN BUILD'){
             steps{
                  sh 'mvn -B -DskipTests clean package'
-		 sh 'sudo cp target/*.jar /home/ec2-user/Package-dir'
             }
         }
         stage('TEST'){
