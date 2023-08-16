@@ -8,7 +8,7 @@ pipeline {
         stage('MAVEN BUILD'){
             steps{
                  sh 'mvn -B -DskipTests clean package'
-		 sh 'mv target/*.jar tomcat-app.jar'
+		 sh 'mv target/*.jar target/tomcat-app.jar'
             }
         }
         stage('TEST'){
